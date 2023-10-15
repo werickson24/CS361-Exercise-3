@@ -1,6 +1,9 @@
 class Student
-    @MAX_COURSES = 5
-    @schedule
+    MAX_COURSES = 5
+    schedule
+	def initialize()
+		schedule = Schedule.new
+	end
     def add_course(course, quarter, max)
         schedule.add_course(course, quarter, max)
     end
@@ -10,7 +13,10 @@ class Student
 end
 
 class Schedule
-    []Quarters term;
+    term
+	def initialize()
+		term = Array.new
+	end
     def add_course(course, quarter)
         if term[quarter].class_count > max {
             throw error;
@@ -20,17 +26,20 @@ class Schedule
         
     end
     
-    def remove_course(course)
-        quarters[quarter].remove_course(course);
+    def remove_course(course, quarter)
+        term[quarter].remove_course(course);
     end
 
 end
 
 class Quarter
-    []Course classes
-    
+    classes
+	
+	def initialize()
+		classes = Array.new
+	end
     def class_count()
-      classes.length
+		classes.size
     end
     def add_course(course)
         classes.push(course)
@@ -42,6 +51,7 @@ class Quarter
 
 end
 class Course
-    @name
-    @id
+    id
+	name
+	
 end
