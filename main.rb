@@ -1,9 +1,9 @@
 class Student
     MAX_COURSES = 5
     schedule
-	def initialize()
-		schedule = Schedule.new
-	end
+    def initialize()
+        schedule = Schedule.new
+    end
     def add_course(course, quarter, max)
         schedule.add_course(course, quarter, max)
     end
@@ -14,9 +14,9 @@ end
 
 class Schedule
     term
-	def initialize()
-		term = Array.new
-	end
+    def initialize()
+        term = Array.new
+    end
     def add_course(course, quarter)
         if term[quarter].class_count > max {
             throw error;
@@ -34,12 +34,12 @@ end
 
 class Quarter
     classes
-	
-	def initialize()
-		classes = Array.new
-	end
+    
+    def initialize()
+        classes = Array.new
+    end
     def class_count()
-		classes.size
+        classes.size
     end
     def add_course(course)
         classes.push(course)
@@ -52,6 +52,6 @@ class Quarter
 end
 class Course
     id
-	name
-	
+    name
+    
 end
